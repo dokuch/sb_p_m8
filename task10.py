@@ -34,3 +34,24 @@ print('Задача 10. Кинотеатр')
 # Введите кол-во мальчиков: 100
 # Введите кол-во девочек: 1
 # Ответ: Нет решения
+
+boys = int(input('Введите кол-во мальчиков: '))
+girls = int(input('Введите кол-во девочек: '))
+result = ''
+
+if boys > 2 * girls or girls > 2 * boys:
+    result = 'Нет решения'
+elif girls > boys:
+    amount = girls - boys
+    for index in range(amount):
+        result += 'GBG'
+    for index in range(boys - amount):
+        result += 'GB'
+else:
+    amount = boys - girls
+    for index in range(amount):
+        result += 'BGB'
+    for index in range(girls - amount):
+        result += 'BG'
+
+print('Ответ:', result)
