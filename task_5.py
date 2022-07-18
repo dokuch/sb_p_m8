@@ -25,3 +25,10 @@ print('Задача 5. Функция 2')
 # В точке 0 функция равна 1
 # В точке -1 функция равна 6
 # В точке -2 функция равна 9
+
+start = int(input('start: '))
+end = int(input('end: '))
+step = int(input('step: '))
+
+for point in range(end, start - 1, step):
+    print('В точке', point, 'функция равна', point**3 + 2*point**2 - 4*point + 1)
