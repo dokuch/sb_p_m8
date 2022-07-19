@@ -7,8 +7,10 @@ print('Задача 8. Сумма ряда')
 
 n = int(input('input N: '))
 result = 1
+pre = 1
 
 for index in range(1, n + 1):
-    result += (-1) ** index * 1 / 2 ** index
+    pre *= -0.5
+    result += pre
 
 print(result)
