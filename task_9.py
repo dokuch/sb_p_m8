@@ -9,24 +9,18 @@ print('Задача 9. Выражение')
 
 x = int(input('x: '))
 
-if 1 <= x <= 64:
-    if x % 2 == 0:
-        print('error: division by zero')
-    else:
-        print('result: 0')
-else:
-    numerator = 1
-    denominator = 1
+numerator = 1
+denominator = 1
 
-    for index in range(1, 65):
-        if index % 2 == 0:
-            denominator *= (x - index)
-            print('index', index, 'znam', denominator)
-        else:
-            numerator *= (x - index)
-            print('index', index, 'chis', numerator)
-
+for index in range(1, 8):
+    k = 2 ** index
+    denominator *= x - k
+    numerator *= x - (k - 1)
+    if numerator == 0:
+        print('result = 0')
+        break
     if denominator == 0:
         print('error: division by zero')
-    else:
-        print('result:', numerator / denominator)
+        break
+else:
+    print('result:', numerator / denominator)
