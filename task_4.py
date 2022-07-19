@@ -10,6 +10,15 @@ a = int(input('a: '))
 b = int(input('b: '))
 c = int(input('c: '))
 
+count = 0
+summ = 0
+
 for index in range(a, b + 1):
     if index % c == 0:
-        print(index)
+        summ += index
+        count += 1
+
+if count == 0:
+    print('Error. Division by zero')
+else:
+    print('avg:', summ / count)
