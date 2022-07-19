@@ -9,12 +9,12 @@ print('Задача 6. Письмо')
 # чтобы оно поместилось в конверт.
 # Размеры письма вводятся с клавиатуры.
 
-packed_size = 12
+pack_size = 12
 
 letter_size = int(input('input letter size: '))
 
-if letter_size > packed_size:
-    count = letter_size / (2 * packed_size)
+if letter_size > pack_size:
+    count = letter_size / (2 * pack_size)
 else:
     count = 0
 
