@@ -21,12 +21,8 @@ user_break = False
 for index in range(reverse_timer, 0, -1):
     print('timer:', index)
     if int(input('stop? 1 - Да, еда готова, 0 - Нет ')) == 1:
-        stop_time = index
-        user_break = True
+        print('Ваша еда готова, можете забрать. Timer:', index)
         break
-
-if user_break:
-    print('Ваша еда готова, можете забрать. Timer:', stop_time)
 else:
     print('Ваша еда готова, осторожно горячo!')
 
