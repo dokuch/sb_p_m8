@@ -13,12 +13,10 @@ pack_size = 12
 
 letter_size = int(input('input letter size: '))
 
-if letter_size > pack_size:
-    count = letter_size / (2 * pack_size)
-else:
-    count = 0
+count = 0
 
-if count % 1 > 0:
-    count = (count // 1 + 1)
+while letter_size > pack_size:
+    count += 2
+    letter_size /= 2
 
-print('result:', count * 2)
+print('result:', count)
